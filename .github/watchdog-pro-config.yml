@@ -72,7 +72,7 @@ pullRequests:
       - new
 issues:
   assignee:
-    enabled: false
+    enabled: true
     assignees:
       - shiv-source
   chatGpt:
