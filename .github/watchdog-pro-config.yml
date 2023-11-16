@@ -1,0 +1,95 @@
+pullRequests:
+  readyForReview:
+    enable: true
+    label: ready-for-review
+  approvals:
+    enabled: false
+    required: 1
+  assignee:
+    enabled: true
+    assignees: []
+  reviewer:
+    enabled: false
+    reviewers:
+      - shiv-source
+  autoMerge:
+    enabled: false
+    strategy: SQUASH # Merging strategy (options: merge, squash, rebase)
+    hasNotification: false # Send notifications to all the notifications strategy those flags has enabled
+  semanticLabelByBranchName:
+    enabled: false
+  wip:
+    enabled: true
+    keywords:
+      - WIP
+      - DO NOT MERGE
+    labels:
+      - in-progress
+      - can't merge
+  chatGpt:
+    enabled: false
+  branchLint:
+    enabled: true
+    useSemanticBranchName: true
+    labels:
+      - branch-name-issue
+      - can't merge
+    forceCloseWithComment: true
+    comment: ""
+  semanticBranchName:
+    enabled: true
+    branches:
+      - name: feature
+        labels:
+          - feature
+      - name: bugfix
+        labels:
+          - bugfix
+      - name: hotfix
+        labels:
+          - hotfix
+      - name: feat
+        labels:
+          - feat
+      - name: fix
+        labels:
+          - fix
+      - name: docs
+        labels:
+          - docs
+      - name: test
+        labels:
+          - test
+      - name: refactor
+        labels:
+          - refactor
+      - name: style
+        labels:
+          - style
+  onOpenAddLabels:
+    enabled: false
+    labels:
+      - new
+issues:
+  assignee:
+    enabled: false
+    assignees:
+      - shiv-source
+  chatGpt:
+    enabled: false
+  onOpenAddLabels:
+    enabled: true
+    labels:
+      - new
+notifications:
+  email:
+    enabled: false
+    recipients: []
+  slack:
+    enabled: false
+    channel: "#general"
+    token: ""
+  telegram:
+    enabled: false
+    chatId: ""
+    token: ""
