@@ -14,14 +14,17 @@ pullRequests:
       - shiv-source
   autoMerge:
     enabled: true
-    mergeableBranches: 
+    strategy: squash
+    mergeableBranches:
       - bugfix
       - fix
-    strategy: merge
+      - feature
+      - feat
+      - docs
     hasNotification: false
     isBranchDeletable: true
   semanticLabelByBranchName:
-    enabled: false
+    enabled: true
   wip:
     enabled: true
     keywords:
@@ -70,15 +73,17 @@ pullRequests:
       - name: style
         labels:
           - style
+      - name: release
+        labels:
+          - release
   onOpenAddLabels:
     enabled: false
     labels:
       - new
 issues:
   assignee:
-    enabled: true
-    assignees:
-      - shiv-source
+    enabled: false
+    assignees: []
   chatGpt:
     enabled: false
   onOpenAddLabels:
@@ -86,7 +91,7 @@ issues:
     labels:
       - new
   onOpenThanks:
-    enabled: true,
+    enabled: true
     message: ""
 notifications:
   email:
