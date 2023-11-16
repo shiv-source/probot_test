@@ -19,6 +19,7 @@ pullRequests:
       - fix
     strategy: merge
     hasNotification: false
+    isBranchDeletable: true
   semanticLabelByBranchName:
     enabled: false
   wip:
