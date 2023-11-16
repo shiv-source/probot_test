@@ -13,7 +13,10 @@ pullRequests:
     reviewers:
       - shiv-source
   autoMerge:
-    enabled: false
+    enabled: false,
+    mergeableBranches: 
+      - bugfix
+      - fix
     strategy: SQUASH # Merging strategy (options: merge, squash, rebase)
     hasNotification: false # Send notifications to all the notifications strategy those flags has enabled
   semanticLabelByBranchName:
