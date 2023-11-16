@@ -13,7 +13,7 @@ pullRequests:
     reviewers:
       - shiv-source
   autoMerge:
-    enabled: false,
+    enabled: true
     mergeableBranches: 
       - bugfix
       - fix
