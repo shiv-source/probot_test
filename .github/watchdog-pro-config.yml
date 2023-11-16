@@ -81,6 +81,9 @@ issues:
     enabled: true
     labels:
       - new
+  onOpenThanks:
+    enabled: true,
+    message: ""
 notifications:
   email:
     enabled: false
